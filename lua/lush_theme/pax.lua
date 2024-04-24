@@ -78,6 +78,7 @@ local theme = lush(function(injected_functions)
 
 	-- other
 	local tmux = hsl(300, 60, 20)
+	local fadedTmux = hsl(300, 40, 15)
 
 	-- roles
 	local error = red
@@ -171,10 +172,10 @@ local theme = lush(function(injected_functions)
 		WinBar({ SignColumn, fg = hotPink }), -- Window bar of current window
 		WinBarNC({ LineNr }), -- Window bar of not-current windows
 		-- CUSTOM RULER
-		CustomRulerSeparator({ fg = tmux, bg = grey }),
+		CustomRulerSeparator({ fg = tmux, bg = dark }),
 		CustomRulerIcon({ fg = bright, bg = tmux }),
-		CustomRulerFile({ fg = bright, bg = grey }),
-		CustomRulerError({ fg = red, bg = grey }),
+		CustomRulerFile({ fg = bright, bg = fadedTmux }),
+		CustomRulerError({ fg = red, bg = dark }),
 
 		-- Common vim syntax groups used for all kinds of code and markup.
 		-- Commented-out groups should chain up to their preferred (*) group
