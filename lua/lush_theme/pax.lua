@@ -337,22 +337,25 @@ local theme = lush(function(injected_functions)
 		sym("@boolean.javascript")({ Type }), -- true/false
 		sym("@constant.builtin.javascript")({ Type }), -- null/undefined
 		sym("@constructor.javascript")({ Function }), -- treat constructor as a method
+		sym("@function.builtin.javascript")({ Statement }), -- require
+		sym("@tag.attribute.javascript")({ Type }), -- all tag attributes
 		sym("@tag.builtin.javascript")({ Type }), -- div/a/span etc.
+		sym("@tag.delimiter.javascript")({ Delimiter }),
 		sym("@tag.javascript")({ Type }), -- custom components
 		sym("@none.javascript")({ Constant }), -- text inside tags
 
 		-- TS
+		sym("@constructor.typescript")({ Function }), -- treat constructor as a method
 		sym("@boolean.typescript")({ Type }), -- true/false
 		sym("@constant.builtin.typescript")({ Type }), -- null/undefined
 
 		-- TSX
 		sym("@boolean.tsx")({ Type }), -- true/false
 		sym("@constant.builtin.tsx")({ Type }), -- null/undefined
-		sym("@constant.builtin.tsx")({ Constant }), -- null/undefined
 		sym("@constructor.tsx")({ Function }), -- treat constructor as a method
 		sym("@tag.attribute.tsx")({ Delimiter }),
-		sym("@tag.delimiter.tsx")({ Delimiter }),
 		sym("@tag.builtin.tsx")({ Type }), -- div/a/span etc.
+		sym("@tag.delimiter.tsx")({ Delimiter }),
 		sym("@tag.tsx")({ Type }), -- custom components
 		sym("@none.tsx")({ Constant }), -- text inside tags
 
